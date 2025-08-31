@@ -1,0 +1,12 @@
+{
+  "name": "url-shortner-project",
+  "version": "1.0.0",
+  "description": "Learning express JS",
+  "main": "app.js",
+  "scripts": {
+    "dev":"node --watch app.js",
+    "start": "node app.js"
+  },
+  "author": "Udesh Rathod",
+  "license": "ISC"
+}
