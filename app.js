@@ -4,7 +4,7 @@ import path, { join } from "path";
 import crypto from "crypto";
 import { link } from "fs";
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join("data", "links.json");
 
 // Load saved links
@@ -91,6 +91,7 @@ const server = createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
+
